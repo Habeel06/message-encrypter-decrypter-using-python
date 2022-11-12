@@ -17,14 +17,18 @@ while True:
                         print("Key to decode the message :" + str(key))
 
         elif "decode" in x:
-                        dstr=input("Enter the message you want to decode (make sure that you exclude b) :")
-                        dk=input("Enter Key (make sure that you exclude b) :")
-                        y=Fernet.generate_key()
-                        a=str(dstr)
-                        y=(dk)
-                        x=Fernet(y)
-                        decodedmsg = x.decrypt(a).decode()
-                        print("The decoded message is : " + str(decodedmsg))
+                        try:
+                                dstr=input("Enter the message you want to decode (make sure that you exclude b) :")
+                                dk=input("Enter Key (make sure that you exclude b) :")
+                                y=Fernet.generate_key()
+                                a=str(dstr)
+                                y=(dk)
+                                x=Fernet(y)
+                                decodedmsg = x.decrypt(a).decode()
+                                print("The decoded message is : " + str(decodedmsg))
+                        except ValueError:
+                                print('''Oops! Wrong encrypted message or wrong key given.
+TRY AGAIN!''')
 
 
         
