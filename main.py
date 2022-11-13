@@ -18,7 +18,7 @@ print(colored('''
                                          \$$    $$| $$                                   
                                           \$$$$$$  \$$                                     ''','green'))
 
-print(colored("Report a bug at:https://github.com/Habeel06/message-encrypter-decrypter-using-python ",'yellow'))
+print(colored("Report a bug at:https://github.com/Habeel06/msg-encrypter-decrypter-python ",'yellow'))
 while True:
 
 
