@@ -20,9 +20,7 @@ print(colored('''
 
 print(colored("Report a bug at:https://github.com/Habeel06/msg-encrypter-decrypter-python ",'yellow'))
 while True:
-
-
-        x=input("Type encode to encode and decode to decode :")
+        x = input("Type encode to encode and decode to decode: ")
 
         if "encode" in x:
                 try:
@@ -44,12 +42,12 @@ while True:
 
         elif "decode" in x:
                 try:
-                        dstr=input("Enter the message you want to decode (make sure that you exclude b) :")
-                        dk=input("Enter Key (make sure that you exclude b) :")
-                        y=Fernet.generate_key()
-                        a=str(dstr)
-                        y=(dk)
-                        x=Fernet(y)
+                        dstr = input("Enter the message you want to decode (make sure that you exclude b) :")
+                        dk = input("Enter Key (make sure that you exclude b) :")
+                        y = Fernet.generate_key()
+                        a = str(dstr)
+                        y = (dk)
+                        x = Fernet(y)
                         decodedmsg = x.decrypt(a).decode()
                         print("The decoded message is : " + str(decodedmsg))
                 except:
